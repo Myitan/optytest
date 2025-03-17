@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osi MatKap</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./app.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Osi MatKap</h1>
+        <button class="add-btn" onclick="showAddModal()">Dodaj nowy wpis</button>
+    </div>
+
+    <div class="container">
+        <table id="operationsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nazwa operacji</th>
+                    <th>Opis</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody id="operationsBody">
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="modal" id="addModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeAddModal()">&times;</span>
+            <h2>Dodaj nowy wpis</h2>
+            <input type="text" id="operationName" placeholder="Nazwa operacji">
+            <textarea id="operationDescription" placeholder="Opis operacji"></textarea>
+            <button class="edit-btn" onclick="saveOperation()">Zapisz</button>
+        </div>
+    </div>
+
+</body>
+</html>
